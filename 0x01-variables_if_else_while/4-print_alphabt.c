@@ -11,10 +11,9 @@ int main(void)
 
 	for (; i < 123 ; i++)
 	{
-		putchar (i);
-		if (i == 'q' && i == 'e')
+		if (i != 'q' && i != 'e')
 		{
-			continue;
+			putchar (i);
 		}
 	}
 	putchar ('\n');
