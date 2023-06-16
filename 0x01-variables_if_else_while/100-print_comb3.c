@@ -18,11 +18,16 @@ int main(void)
 			putchar((num1 % 10) + '0');
 			if (num1 == 9 && num == 8)
 			{
-				continue;
+				break;
 			}
 			putchar (',');
 			putchar (' ');
 		}
+		if (num == 8 && num1 == 9)
+		{
+			break;
+		}
+		putchar ('\n');
 	}
 	return (0);
 }
