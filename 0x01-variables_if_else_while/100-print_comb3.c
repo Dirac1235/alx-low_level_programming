@@ -16,13 +16,13 @@ int main(void)
 		{
 			putchar((num % 10) + '0');
 			putchar((num1 % 10) + '0');
+			if (num1 == 9 && num == 9)
+			{
+				continue;
+			}
+			putchar (',');
+			putchar (' ');
 		}
-		if (num == 9)
-		{
-			continue;
-		}
-		putchar (',');
-		putchar (' ');
 	}
 	return (0);
 }
