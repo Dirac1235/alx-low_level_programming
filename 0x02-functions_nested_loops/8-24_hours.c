@@ -19,7 +19,7 @@ void jack_bauer(void)
 		_putchar (c + '0');
 		_putchar (d + '0');
 		_putchar ('\n');
-		if (b == 9)
+		if (b == 9 && c == 5 && d == 9)
 		{
 			a += 1;
 			b = 0;
