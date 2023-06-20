@@ -8,9 +8,9 @@
 int main(void)
 {
 	int i;
-	int a;
-	int b;
-	int next;
+	long int a;
+	long int b;
+	long int next;
 
 	a = 1;
 
@@ -20,10 +20,10 @@ int main(void)
 	{
 		if (a != 20365011074)
 		{
-			printf("%d, ", a);
+			printf("%ld, ", a);
 		} else
 		{
-			printf("%d\n", a);
+			printf("%ld\n", a);
 		}
 		next = a + b;
 		b = a;
