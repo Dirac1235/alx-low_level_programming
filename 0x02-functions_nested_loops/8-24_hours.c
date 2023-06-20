@@ -24,13 +24,16 @@ void jack_bauer(void)
 			a += 1;
 			b = 0;
 		}
-		if (c == 5 && d == 9)
+		else if (c == 5 && d == 9)
 		{
 			b += 1;
 		}
-		if (d == 9)
+		else if (d == 9)
 		{
 			c += 1;
+		}
+		else
+		{
 		}
 		d += 1;
 		c = c % 6;
