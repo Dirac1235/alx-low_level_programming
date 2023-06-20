@@ -26,8 +26,8 @@ int main(void)
 			printf("%ld\n", a);
 		}
 		next = a + b;
-		b = a;
-		a = next;
+		a = b;
+		b = next;
 	}
 
 	return (0);
