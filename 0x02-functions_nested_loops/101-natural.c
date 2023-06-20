@@ -27,6 +27,6 @@ int main(void)
 		}
 	}
 	sum = x + y;
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
