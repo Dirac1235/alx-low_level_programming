@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_numbers - prints number form 0 to 9
  *
