@@ -10,14 +10,14 @@
  */
 int main(void)
 {
-	int passw[50];
+	int passw[100];
 	int i;
 	int max;
 
 	srand(time(NULL));
-	max = 100;
+	max = 10;
 
-	for (i = 0; i < 50; i++)
+	for (i = 0; i < 100; i++)
 	{
 		passw[i] = rand() / max;
 		putchar(passw[i] + '0');
