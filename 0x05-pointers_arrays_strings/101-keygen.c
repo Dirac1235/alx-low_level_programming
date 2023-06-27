@@ -20,7 +20,7 @@ int main(void)
 	max = 78;
 	sum = 0;
 
-	for (i = 0; i < 31; i++)
+	for (i = 0; i < 30; i++)
 	{
 		passw[i] = rand() % max;
 		putchar(passw[i] + '0');
