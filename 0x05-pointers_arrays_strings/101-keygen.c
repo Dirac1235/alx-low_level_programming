@@ -29,17 +29,5 @@ int main(void)
 		passw[i++] = remaining;
 		putchar(passw[i - 1] + '0');
 	}
-	else
-	{
-		while (remaining > 0)
-		{
-			int num = (remaining > 78) ? 78 : remaining;
-
-			passw[i++] = num;
-			putchar(num + '0');
-			remaining -= num;
-		}
-	}
-
 	return (0);
 }
