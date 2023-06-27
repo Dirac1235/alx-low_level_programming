@@ -13,6 +13,7 @@ int main(void)
 	int passw[100];
 	int i;
 	int max;
+	int remaining;
 
 	srand(time(NULL));
 	max = 78;
@@ -22,6 +23,9 @@ int main(void)
 		passw[i] = rand() % max;
 		putchar(passw[i] + '0');
 	}
+	remaining = 2772 - sum;
+	remaining %= max;
+	putchar(remaining + '0');
 
 	return (0);
 }
