@@ -17,7 +17,7 @@ int main(void)
 	srand(time(NULL));
 	max = 10;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 31; i++)
 	{
 		passw[i] = rand() / max;
 		putchar(passw[i] + '0');
