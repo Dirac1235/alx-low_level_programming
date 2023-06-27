@@ -15,11 +15,11 @@ int main(void)
 	int max;
 
 	srand(time(NULL));
-	max = 10;
+	max = 78;
 
 	for (i = 0; i < 31; i++)
 	{
-		passw[i] = rand() / max;
+		passw[i] = rand() % max;
 		putchar(passw[i] + '0');
 	}
 
