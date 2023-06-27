@@ -16,23 +16,23 @@ int _atoi(char *str)
 	int length = 0;
 	int foundDigit = 0;
 
-	while (str[length] != '\0')
+	while (*(str + length) != '\0')
 		length++;
 
 	for (index = 0; index < length && foundDigit == 0; index++)
 	{
-		if (str[index] == '-')
+		if (*(str + index) == '-')
 			countNegatives++;
 
-		if (str[index] >= '0' && str[index] <= '9')
+		if (*(str + index) >= '0' && *(str + index) <= '9')
 		{
-			int digit = str[index] - '0';
+			int digit = *(str + index) - '0';
 
 			if (countNegatives % 2)
 				digit = -digit;
 			result = result * 10 + digit;
 			foundDigit = 1;
-			if (str[index + 1] < '0' || str[index + 1] > '9')
+			if (*(str + index + 1) < '0' || *(str + index + 1) > '9')
 				break;
 			foundDigit = 0;
 		}
