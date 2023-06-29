@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * cap_string - capitalizes words that come,
- *  after special character
+ * after special character
  *
  * @a: the string to be capitalized
  * Return: the capitalized string
