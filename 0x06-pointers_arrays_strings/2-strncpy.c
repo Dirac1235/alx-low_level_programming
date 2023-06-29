@@ -9,7 +9,6 @@
  * Return: concatenated array
  */
 char *_strncpy(char *dest, char *src, int n)
-strncpy(char *dest, const char *src, size_t n)
 {
 	int i;
 
