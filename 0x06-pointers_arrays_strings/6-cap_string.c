@@ -13,7 +13,7 @@ char *cap_string(char *c)
 
 	while (c[count] != '\0')
 	{
-		if (count == 0 && c[count] >= 'a' && s[count] <= 'z')
+		if (count == 0 && c[count] >= 'a' && c[count] <= 'z')
 			c[count] -= 32;
 
 		if (c[count] >= 'a' && c[count] <= 'z')
