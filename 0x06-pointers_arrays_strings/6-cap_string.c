@@ -29,4 +29,5 @@ char *cap_string(char *c)
 		}
 		count++;
 	}
+	return (c);
 }
