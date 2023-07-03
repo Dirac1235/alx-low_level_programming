@@ -2,7 +2,7 @@
 /**
  * _strchr - returns the pointer to the first occurence in memory
  *@s: the array
- *@c: charcter that is serched
+ *@n: charcter that is serched
  *Return: the pointer to that array
  */
 char *_strchr(char *s, char c)
@@ -13,7 +13,7 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			return ((s + i));
+			return ((s+i));
 		}
 	}
 	return (0);
