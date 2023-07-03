@@ -5,7 +5,7 @@
  *@a: the array
  *@size: the size of the array
  */
-void print_diagsums(int *a,int size)
+void print_diagsums(int *a, int size)
 {
 	int i;
 	unsigned int mdiagonal = 0;
@@ -16,5 +16,5 @@ void print_diagsums(int *a,int size)
 		mdiagonal += a[(size * i) + i];
 		ldiagonal += a[(size * (i + 1)) - (i + 1)];
 	}
-	printf("%d, %d\n",mdiagonal,ldiagonal);
+	printf("%d, %d\n", mdiagonal, ldiagonal);
 }
