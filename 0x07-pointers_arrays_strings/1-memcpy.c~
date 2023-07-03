@@ -1,0 +1,18 @@
+#include "main.h"
+/**
+ * _memcpy - copies n bytes from the  memory
+ *@dest: the array to be filled
+ *@src: the character to be filled in
+ *@n: the number of charcters that are copied
+ *Return: the array
+ */
+char *_memset(char *dest, char *src, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
+}
