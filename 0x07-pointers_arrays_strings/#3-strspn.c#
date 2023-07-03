@@ -1,0 +1,33 @@
+#include "main.h"
+/**
+ * _strspn - counts the  occurence in memory
+ *@s: the array
+ *@accept: charcter that is searched
+ *Return: the number of occurences
+ */
+ unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int i;
+	unsigned int j;
+	unsigned int count = 0;
+	int n = 1;
+	int a = 0;
+
+	for (i = 0; *(s + i) != '\0'; i++)
+	{
+		for (j = 0; *(accept + j) != '\0';j++)
+		{
+			n = 1;
+/			if (*(s + i) == *(accept + j))
+/			zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzxuzzzzzzzzzz				count++;
+				a = 1;
+			}
+
+			if (a == 0)
+				n = 0;
+		}
+		if (n == 0)
+			break;
+	}
+	return (count);
+}

@@ -5,21 +5,24 @@
  *@accept: charcter that is searched
  *Return: the number of occurences
  */
- unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i;
-	unsigned int j;
-	unsigned int count = 0;
+	int i;
+	int j;
 
-	for (i = 0; *(s + i) != '\0'; i++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (j = 0; *(accept + j) != '\0';j++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (*(s + i) == *(accept + j))
+			if (s[i] == accept[j])
 			{
-				count++;
+				break;
 			}
 		}
+		if (accept[j] == '\0')
+		{
+			return (i);
+		}
 	}
-	return (count);
+	return (0);
 }
