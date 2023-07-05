@@ -11,7 +11,7 @@ int _sqrt_recursion(int n)
 		return (-1);
 	else if (n == 0)
 		return (0);
-	return (isqrt(n, n));
+	return (isqrt(n, 1));
 }
 /**
  *isqrt - calculates the square root recursively
@@ -21,10 +21,10 @@ int _sqrt_recursion(int n)
  */
 int isqrt(int m, int n)
 {
-	if (n == 0)
+	if (n * n > m)
 		return (-1);
 	else if ((float)m / (float)n == n)
 		return ((int)n);
 	else
-		return (isqrt(m, n - 1));
+		return (isqrt(m, n + 1));
 }
