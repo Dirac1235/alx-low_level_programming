@@ -2,7 +2,7 @@
 
 /**
  * print_all - prints anything
- * @format: list of types of arguments passed to the function
+ * @format: list of type of  arguments passed
  */
 void print_all(const char * const format, ...)
 {
