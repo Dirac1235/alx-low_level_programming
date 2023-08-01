@@ -4,8 +4,7 @@
 /**
  * delete_nodeint_at_index - Traverses the list to insert at nth node of
  * the linked list
- * @idx: the index of the node
- * @n: the data
+ * @index: the index of the node
  * @head: the list
  *
  * Return: The new nth node of the linked list
@@ -14,19 +13,31 @@
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *temp = *head;
-	listint_t *temp2;
-	int i;
+	listint_t *current = NULL;
+	unsigned int i = 0;
 
 	if (*head == NULL)
 		return (-1);
 
-	for (i = 0; i < (index - 1) && temp; i++)
+	if (index == 0)
 	{
-		temp = temp->next;
+		*head = (*head)->next;
+		free(temp);
+		return (1);
 	}
-	temp->next = temp2;
-	temp->next = temp->next->next;
-	free(temp2);
+
+	while (i < index - 1)
+	{
+		if (!temp || !(temp->next))
+			return (-1);
+		temp = temp->next;
+		i++;
+	}
+
+
+	current = temp->next;
+	temp->next = current->next;
+	free(current);
 
 	return (1);
 }
