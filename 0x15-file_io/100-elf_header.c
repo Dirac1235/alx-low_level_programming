@@ -26,7 +26,7 @@ void close_file(int elf);
 int main(int argc, char **argv)
 {
 	int fd_elf, r_elf, close_elf, bits64 = 0;
-	char h[32];
+	unsigned char h[32];
 
 	/*restrictions with exit 98*/
 	if (argc != 2)
@@ -104,7 +104,7 @@ void show_magic(unsigned char *file)
  */
 void show_class(unsigned char *file)
 {
-	printf("  Class:                              ");
+	printf("  Class:                             ");
 
 	switch (file[EI_CLASS])
 	{
@@ -173,10 +173,12 @@ void show_version(unsigned char *file)
  */
 
 void show_os_abi(unsigned char *file)
-{
+{	
+	unsigned char osabi;
+
 	printf("  OS/ABI:                            ");
 
-	unsigned char osabi = file[EI_OSABI];
+	osabi = file[EI_OSABI];
 
 	if (osabi == ELFOSABI_NONE)
 		printf("UNIX - System V\n");
