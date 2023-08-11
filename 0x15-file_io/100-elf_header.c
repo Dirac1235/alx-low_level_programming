@@ -173,7 +173,7 @@ void show_version(unsigned char *file)
  */
 
 void show_os_abi(unsigned char *file)
-{	
+{
 	unsigned char osabi;
 
 	printf("  OS/ABI:                            ");
