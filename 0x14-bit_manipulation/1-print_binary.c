@@ -1,28 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 
+/**
+ * print_binary - it prints the binary representation of decimal number
+ * @n: The number to be changed to  binary number
+ */
 
 void print_binary(unsigned long int n)
 {
-	int i = 0;
-	int num;
+	unsigned long int temp;
+	int shifts;
 
-	while (n >> i)
-	{
-		i++;
-	}
-	i--;
 	if (n == 0)
 	{
-		_putchar('0');
+		printf("0");
 		return;
 	}
-	while (i >= 0)
+
+	for (temp = n, shifts = 0; (temp >>= 1) > 0; shifts++)
+		;
+
+	for (; shifts >= 0; shifts--)
 	{
-		num = n >> i;
-		if ((num & 1) == 1)
-			_putchar('1');
+		if ((n >> shifts) & 1)
+			printf("1");
 		else
-		_putchar('0');
-		i--;
+			printf("0");
 	}
 }

@@ -1,16 +1,22 @@
 #include "main.h"
+#include <stdio.h>
+
+/**
+ * get_bit - it finds the bit of decimal
+ * at given index
+ * @n: The decimal number
+ * @index: the index to bit to be changed
+ *
+ * Return: the bit at the given index
+ */
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	int count = 0;
-	int shifted;
+	int bit;
 
-	while (n >> count)
-		count++;
+	if (index > 64)
+		return (-1);
 
-	shifted = n >> (count - index);
-
-	if ((shifted & 1) == 1)
-		return (1);
-	return (0);
+	bit = n >> index;
+	return (bit & 1);
 }
