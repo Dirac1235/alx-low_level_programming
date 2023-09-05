@@ -13,21 +13,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buffer;
 
 	if (!filename)
-		exit(0);
+		return (0);
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		exit(0);
+		return (0);
 
-	buffer = malloc(letters);
+	buffer = malloc(letters * sizeof(char));
 	if (!buffer)
-		exit(0);
+		return (0);
 
 	num = read(fd, buffer, letters);
 	written_num = write(STDOUT_FILENO, buffer, num);
 
 	if (written_num < 0)
-		exit(0);
+		return (0);
 
 	free(buffer);
 	close(fd);
