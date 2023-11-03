@@ -25,5 +25,5 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 		if (strcmp(current_node->key, key) == 0)
 			return (current_node->value);
 	}
-	return (NULL)
+	return (NULL);
 }
