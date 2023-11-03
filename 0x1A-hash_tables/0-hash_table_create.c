@@ -19,11 +19,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 		Return(NULL);
 
 	table->size = size;
-	table->count = 0;
-	table->items = (H_items **) calloc(size, sizeof(H_items *));
+	table->array = (hash_node_t **) calloc(size, sizeof(hash_node_t *));
 
 	for (i = 0; i < table->size; i++)
-		table->items[i] = NULL;
+		table->array[i] = NULL;
 
 	return (table);
 }
