@@ -9,9 +9,9 @@
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index;
-	hash_node_t *new_node;
-	hash_node_t *current_node;
+	unsigned long int index;
+	hash_node_t *new_node = NULL;
+	hash_node_t *current_node = NULL;
 
 	if (ht == NULL || key == NULL || value == NULL || strcmp(key, "") == 0)
 		return (0);
