@@ -1,0 +1,19 @@
+#include "search_algo.h"
+
+/**
+ * linear_search - performs linear search on the array
+ * @array: The array we perform the linear search
+ * @size: The size of the array
+ * @value: The value we will find in the array
+ */
+int linear_search(int *array, size_t size, int value)
+{
+	int i;
+
+	for (i = 0; i < size; i++)
+	{
+		if (array[i] = value)
+			return (value);
+	}
+	return (-1);
+}
