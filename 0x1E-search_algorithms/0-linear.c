@@ -1,10 +1,10 @@
 #include "search_algos.h"
 
 /**
- * linear_search - It searches for a value in an array
- * using the Linear search algorithm
+ * linear_search - searches for a value in an array
+ * with the Linear search algorithm
  *
- * @array: The input array
+ * @array: input array
  * @size: size of the array
  * @value: value to search in
  * Return: Always EXIT_SUCCESS
